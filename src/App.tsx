@@ -38,7 +38,7 @@ const App: Component = () => {
 
       <div class="flex flex-col border-2">
         <TitleText>Доходы</TitleText>
-        <table class="border-spacing-x-4 border-spacing-y-2 py-4">
+        <table class="border-spacing-x-0 border-spacing-y-2 p-4">
           <thead>
             <tr>
               <th class="border-b bold text-lg">Описание</th>
