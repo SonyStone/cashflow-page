@@ -15,10 +15,14 @@ const Input = (props: { lebel: string }) => (
 
 const TableRow = (props: { children?: any }) => (
   <tr>
-    <td class="border-b">{props.children}</td>
-    <td class="border-b">
+    <td class="border-b w-1/2 white-space-wrap">{props.children}</td>
+    <td class="border-b w-1/2">
       <div class="flex">
-        <input class="grow-1 px-4 border-0 text-center" type="number" />
+        <input
+          class="grow-1 w-0 border-0 text-center text-base bg-transparent"
+          type="number"
+          size="0"
+        />
       </div>
     </td>
   </tr>
@@ -27,7 +31,7 @@ const TableRow = (props: { children?: any }) => (
 const App: Component = () => {
   return (
     <>
-      <div class="flex">
+      <div class="flex flex-wrap gap-y-4">
         <Input lebel="Профессия"></Input>
         <Input lebel="Игрок"></Input>
       </div>
@@ -38,11 +42,11 @@ const App: Component = () => {
 
       <div class="flex flex-col border-2">
         <TitleText>Доходы</TitleText>
-        <table class="border-spacing-x-0 border-spacing-y-2 p-4">
+        <table class="table-fixed border-spacing-x-4 border-spacing-y-2 py-4">
           <thead>
             <tr>
-              <th class="border-b bold text-lg">Описание</th>
-              <th class="border-b bold text-lg">Доход</th>
+              <th class="border-b bold text-lg w-1/2">Описание</th>
+              <th class="border-b bold text-lg w-1/2">Доход</th>
             </tr>
           </thead>
           <tbody>
@@ -57,7 +61,7 @@ const App: Component = () => {
 
       <div class="flex flex-col border-2">
         <TitleText>Расходы</TitleText>
-        <table class="border-spacing-x-0 border-spacing-y-2 p-4">
+        <table class="table-fixed border-spacing-x-0 border-spacing-y-2 p-4">
           <tbody>
             <TableRow>Налоги:</TableRow>
             <TableRow>Оплата ипотеки:</TableRow>
