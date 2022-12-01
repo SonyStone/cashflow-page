@@ -96,38 +96,32 @@ const App: Component = () => {
 
       <h2 class="text-center">Балансовый отчет</h2>
 
-      <table class="table-fixed w-100% border-collapse border-spacing-y-0 border-spacing-x-2 border-1 px-4">
-        <thead>
-          <tr>
-            <th class="w-1/2 p-0">
-              <div class={titleText}>Активы</div>
-            </th>
-            <th class="w-1/2 p-0">
-              <div class={titleText}>Пассивы</div>
-            </th>
-          </tr>
-        </thead>
-        <tbody>
-          <tr>
-            <td class="border-b w-1/2 white-space-wrap">Сбережения:</td>
-            <td class="border-b w-1/2 white-space-wrap">
-              <table class="table-fixed border-spacing-0 w-full pb-8">
-                <tbody>
-                  <TableRow>Ипотека:</TableRow>
-                  <TableRow>Кредит на образование:</TableRow>
-                  <TableRow>Кредит на автомобиль:</TableRow>
-                  <TableRow>Долг по кредитным карточкам:</TableRow>
-                  <TableRow>Розничный долг (мелкие кредиты):</TableRow>
-                  <TableRow>Пассивы (бизнес):</TableRow>
-                  <TableRow>Кредит банка:</TableRow>
-                </tbody>
-              </table>
-            </td>
-          </tr>
-        </tbody>
-      </table>
+      <div class="flex flex-wrap border-2">
+        <div class="flex flex-grow-1 basis-96 flex-col ">
+          <TitleText>Активы</TitleText>
+          <table class="table-fixed border-spacing-x-0 border-spacing-y-2 w-full pb-4 px-4">
+            <tbody>
+              <TableRow>Сбережения:</TableRow>
+            </tbody>
+          </table>
+        </div>
+        <div class="flex flex-grow-1 basis-96 flex-col">
+          <TitleText>Пассивы</TitleText>
+          <table class="table-fixed border-spacing-x-0 border-spacing-y-2 w-full pb-4 px-4">
+            <tbody>
+              <TableRow>Ипотека:</TableRow>
+              <TableRow>Кредит на образование:</TableRow>
+              <TableRow>Кредит на автомобиль:</TableRow>
+              <TableRow>Долг по кредитным карточкам:</TableRow>
+              <TableRow>Розничный долг (мелкие кредиты):</TableRow>
+              <TableRow>Пассивы (бизнес):</TableRow>
+              <TableRow>Кредит банка:</TableRow>
+            </tbody>
+          </table>
+        </div>
+      </div>
 
-      <h2 class="text-center">Понравилась игра? Купи!</h2>
+      <h2 class="text-center">Понравилась игра? Слышь, купи!</h2>
     </div>
   );
 };
